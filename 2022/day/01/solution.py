@@ -17,6 +17,11 @@ with open('2022/day/01/input_a.txt', 'r') as fh:
             elf_calories.append(current_elf_calories)
             current_elf_calories = 0
 
+if current_elf_calories > 0:
+    print('*' * int(current_elf_calories / 1000))
+    maximum_elf_calories = max(current_elf_calories, maximum_elf_calories)
+    elf_calories.append(current_elf_calories)
+
 print()
 
 elf_calories.sort(reverse=True)
